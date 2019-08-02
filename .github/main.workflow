@@ -19,5 +19,9 @@ action "composer deploy" {
 action "ssh config" {
   uses = "docker://composer:latest",
   runs = "sh",
-  args = ["setup_ssh.sh"]
+  args = ["setup_ssh.sh"],
+  secrets = [
+    "SSH_CONFIG",
+    "PRIVATE_KEY"
+  ]
 }
