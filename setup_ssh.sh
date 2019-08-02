@@ -3,7 +3,7 @@
 mkdir -p ~/.ssh
 touch ~/.ssh/known_hosts
 
-echo "$SSH_CONFIG" > ~/.ssh/configd
+echo "$SSH_CONFIG" > ~/.ssh/config
 echo "$SSH_KEY" > ~/.ssh/deploy_key
 
 chmod 700 ~/.ssh
