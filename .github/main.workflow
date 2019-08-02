@@ -18,5 +18,5 @@ action "composer deploy" {
 
 action "ssh config" {
   uses = "docker://composer:latest",
-  runs = "./setup_ssh"
+  runs = "./setup_ssh.sh"
 }
