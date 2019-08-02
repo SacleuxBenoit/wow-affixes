@@ -7,13 +7,14 @@ action "composer install" {
   uses = "docker://composer:latest"
   runs = "composer"
   args = "install"
+  needs = ["ssh config"]
 }
 
 action "composer deploy" {
   uses = "docker://composer:latest"
   runs = "composer"
   args = "deploy"
-  needs = ["composer install", "ssh config"]
+  needs = ["composer install"]
 }
 
 action "ssh config" {
