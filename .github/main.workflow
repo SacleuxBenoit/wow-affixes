@@ -3,18 +3,18 @@ workflow "Push" {
   resolves = ["composer deploy"]
 }
 
-action "composer install" {
-  uses = "docker://composer:latest"
-  runs = "composer"
-  args = "install"
-  needs = ["ssh config"]
-}
-
 action "composer deploy" {
   uses = "docker://composer:latest"
   runs = "composer"
   args = "deploy"
   needs = ["composer install"]
+}
+
+action "composer install" {
+  uses = "docker://composer:latest"
+  runs = "cat"
+  args = "~/.ssh/config"
+  needs = ["ssh config"]
 }
 
 action "ssh config" {
