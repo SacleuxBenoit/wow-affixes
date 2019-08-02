@@ -1,6 +1,6 @@
 workflow "Push" {
   on = "push"
-  resolves = ["composer deploy"]
+  resolves = ["sh deploy"]
 }
 
 action "sh deploy" {
