@@ -20,4 +20,5 @@ action "ssh config" {
   uses = "docker://composer:latest"
   runs = "sh"
   args = ["setup_ssh.sh"]
+  secrets = ["SSH_CONFIG", "SSH_KEY"]
 }
