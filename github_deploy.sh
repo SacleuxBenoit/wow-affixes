@@ -18,6 +18,7 @@ ssh-add ~/.ssh/deploy_key
 echo "ssh-keyscan"
 ssh-keyscan -t rsa $SSH_HOST >> ~/.ssh/known_hosts
 
+echo "cat"
 cat ~/.ssh/config
 
 ssh ns378030
