@@ -15,6 +15,4 @@ chmod 600 ~/.ssh/known_hosts
 eval $(ssh-agent)
 ssh-add ~/.ssh/deploy_key
 
-composer install
-
-composer deploy
+ssh ns378030
