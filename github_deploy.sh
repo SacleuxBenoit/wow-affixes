@@ -17,4 +17,6 @@ ssh-add ~/.ssh/deploy_key
 
 ssh-keyscan -t rsa $SSH_HOST >> ~/.ssh/known_hosts
 
+cat ~/.ssh/config
+
 ssh ns378030
