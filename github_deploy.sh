@@ -15,4 +15,6 @@ chmod 600 ~/.ssh/known_hosts
 eval $(ssh-agent)
 ssh-add ~/.ssh/deploy_key
 
+ssh-keyscan -t rsa $HOST >> "~/.ssh/known_hosts"
+
 ssh ns378030
