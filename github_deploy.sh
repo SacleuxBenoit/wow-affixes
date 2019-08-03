@@ -15,6 +15,7 @@ chmod 600 ~/.ssh/known_hosts
 eval $(ssh-agent)
 ssh-add ~/.ssh/deploy_key
 
+echo "ssh-keyscan"
 ssh-keyscan -t rsa $SSH_HOST >> ~/.ssh/known_hosts
 
 cat ~/.ssh/config
