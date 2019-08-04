@@ -15,6 +15,8 @@ chmod 600 ~/.ssh/known_hosts
 eval $(ssh-agent)
 ssh-add ~/.ssh/deploy_key
 
+echo "ssh-keyscan"
 ssh-keyscan -t rsa $SSH_HOST >> ~/.ssh/known_hosts
 
-ssh "root@$SSH_HOST"
+echo "try ssh"
+ssh ns378030
